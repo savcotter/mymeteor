@@ -1,0 +1,30 @@
+<template name="tSchedule">
+        {{#if currentUser}}
+        <h1>Soccer Schedule</h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Game</th>
+                <th>Away Team</th>
+                <th>Time</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+            {{#each schedule}}
+              <tr>
+                <td>{{game}}</td>
+                <td>{{awayTeam}}</td>
+                <td>{{time}}</td>
+                <td>{{date}}</td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+        {{else}}
+        <h1>You need to log in</h1>
+        <a class="btn btn-success btn-large" href="#">Non Working Button</a>
+        {{/if}}
+</template>
